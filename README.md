@@ -15,16 +15,14 @@ The primary dataset used is UNSW-NB15, and performance is compared against class
 🗂️ Project Structure
 
 Q-VAE-Anomaly-Detection/
-├── .github/workflows/        # GitHub Actions for CI
-├── data/                     # Preprocessed UNSW-NB15 data (train/test split)
-├── model/                    # Q-VAE model architecture (Qiskit)
-├── classical_baseline/       # Classical ML baselines (RF, AE)
-├── notebooks/                # Development notebooks (Jupyter)
-├── utils/                    # PCA, threshold tuning, evaluation metrics
-├── results/                  # Confusion matrices, ROC, and loss curves
-├── report/                   # Capstone final report (PDF)
-├── README.md                 # Project overview and instructions
-└── requirements.txt          # Dependencies
+-  data: Preprocessed UNSW-NB15 data (train/test split)
+-  model:  Q-VAE model architecture (Qiskit)
+-  classical_baseline: Classical ML baselines (RF, AE)
+-  notebooks: Development notebooks (Jupyter)
+-  utils: PCA, threshold tuning, evaluation metrics
+-  results: Confusion matrices, ROC, and loss curves
+-  report: Capstone final report (PDF)
+-  README.md                 # Project overview and instructions
 
 
 ⸻
@@ -52,10 +50,8 @@ Installation
 
 # Clone repo
 $ git clone https://github.com/saadbara/qvae-anomaly-detection.git
-$ cd qvae-anomaly-detection
+$ cd QVAE-Research
 
-# Install dependencies
-$ pip install -r requirements.txt
 
 Run Training
 
@@ -71,42 +67,6 @@ Evaluate Model
 
 $ python utils/evaluate.py --threshold 0.5
 
-
-⸻
-
-✅ Continuous Integration (GitHub Actions)
-
-This project includes a basic CI setup using GitHub Actions.
-
-File: .github/workflows/python-app.yml
-
-name: Python application
-
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v3
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.10'
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-    - name: Run Tests
-      run: |
-        pytest tests/
-
-Add test cases in a tests/ folder to verify pipeline integrity.
 
 ⸻
 
@@ -134,7 +94,7 @@ Classical RF	0.82	         0.88	     0.85	   0.86
 ⸻
 
 🧪 Technologies Used
-	•	Quantum: Qiskit, SamplerQNN, IBM Quantum
+	•	Quantum: Qiskit, SamplerQNN
 	•	Classical ML: Scikit-learn, PCA, Random Forest
 	•	Programming: Python, Jupyter
 	•	Visualization: Matplotlib, Seaborn
@@ -156,8 +116,3 @@ Al Akhawayn University
 📧 saad.bara@aui.ma
 🔗 LinkedIn
 
-⸻
-
-📜 License
-
-This project is licensed under the MIT License.
