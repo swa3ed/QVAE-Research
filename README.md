@@ -1,4 +1,4 @@
-Quantum Variational Autoencoder for Anomaly Detection in Network Traffic
+# Quantum Variational Autoencoder for Anomaly Detection in Network Traffic
 
 This repository accompanies the capstone project titled “Quantum Anomaly Detection System for Network Traffic”, developed by Saad Bara under the supervision of Dr. Fouad Mohammed Abbou during Spring 2025. The project implements a hybrid Quantum Variational Autoencoder (Q-VAE) model to detect network intrusions in the UNSW-NB15 dataset using quantum-enhanced learning.
 
