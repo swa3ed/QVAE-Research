@@ -15,15 +15,15 @@ The primary dataset used is UNSW-NB15, and performance is compared against class
 🗂️ Project Structure
 
 Q-VAE-Anomaly-Detection/
-├── data/                   # Preprocessed UNSW-NB15 data (train/test split)
-├── model/                 # Q-VAE model architecture (Qiskit)
-├── classical_baseline/    # Classical ML baselines (RF, AE)
-├── notebooks/             # Development notebooks (Jupyter)
-├── utils/                 # PCA, threshold tuning, evaluation metrics
-├── results/               # Confusion matrices, ROC, and loss curves
-├── report/                # Capstone final report (PDF)
-├── README.md              # Project overview and instructions
-└── requirements.txt       # Dependencies
+- data/                   # Preprocessed UNSW-NB15 data (train/test split)
+-  model/                 # Q-VAE model architecture (Qiskit)
+-  classical_baseline/    # Classical ML baselines (RF, AE)
+-  notebooks/             # Development notebooks (Jupyter)
+-  utils/                 # PCA, threshold tuning, evaluation metrics
+-  results/               # Confusion matrices, ROC, and loss curves
+-  report/                # Capstone final report (PDF)
+-  README.md              # Project overview and instructions
+-   requirements.txt       # Dependencies
 
 
 ⸻
