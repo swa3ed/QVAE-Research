@@ -50,8 +50,8 @@ Q-VAE-Anomaly-Detection/
 Installation
 
 # Clone repo
-$ git clone https://github.com/saadbara/qvae-anomaly-detection.git
-$ cd qvae-anomaly-detection
+$ git clone [https://github.com/saadbara/qvae-anomaly-detection.git](https://github.com/swa3ed/QVAE-Research.git)
+$ cd QVAE-Resaerch
 
 # Install dependencies
 $ pip install -r requirements.txt
