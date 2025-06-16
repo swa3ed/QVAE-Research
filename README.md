@@ -15,15 +15,16 @@ The primary dataset used is UNSW-NB15, and performance is compared against class
 🗂️ Project Structure
 
 Q-VAE-Anomaly-Detection/
-- data/                   # Preprocessed UNSW-NB15 data (train/test split)
--  model/                 # Q-VAE model architecture (Qiskit)
--  classical_baseline/    # Classical ML baselines (RF, AE)
--  notebooks/             # Development notebooks (Jupyter)
--  utils/                 # PCA, threshold tuning, evaluation metrics
--  results/               # Confusion matrices, ROC, and loss curves
--  report/                # Capstone final report (PDF)
--  README.md              # Project overview and instructions
--   requirements.txt       # Dependencies
+├── .github/workflows/        # GitHub Actions for CI
+├── data/                     # Preprocessed UNSW-NB15 data (train/test split)
+├── model/                    # Q-VAE model architecture (Qiskit)
+├── classical_baseline/       # Classical ML baselines (RF, AE)
+├── notebooks/                # Development notebooks (Jupyter)
+├── utils/                    # PCA, threshold tuning, evaluation metrics
+├── results/                  # Confusion matrices, ROC, and loss curves
+├── report/                   # Capstone final report (PDF)
+├── README.md                 # Project overview and instructions
+└── requirements.txt          # Dependencies
 
 
 ⸻
@@ -50,8 +51,8 @@ Q-VAE-Anomaly-Detection/
 Installation
 
 # Clone repo
-$ git clone [https://github.com/saadbara/qvae-anomaly-detection.git](https://github.com/swa3ed/QVAE-Research.git)
-$ cd QVAE-Resaerch
+$ git clone https://github.com/saadbara/qvae-anomaly-detection.git
+$ cd qvae-anomaly-detection
 
 # Install dependencies
 $ pip install -r requirements.txt
@@ -73,12 +74,48 @@ $ python utils/evaluate.py --threshold 0.5
 
 ⸻
 
+✅ Continuous Integration (GitHub Actions)
+
+This project includes a basic CI setup using GitHub Actions.
+
+File: .github/workflows/python-app.yml
+
+name: Python application
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    - name: Run Tests
+      run: |
+        pytest tests/
+
+Add test cases in a tests/ folder to verify pipeline integrity.
+
+⸻
+
 📈 Results Summary
 
-Model	Precision	Recall	F1-Score	Accuracy
-Initial Q-VAE	0.68	0.98	0.80	0.67
-Improved Q-VAE	0.85	0.90	0.87	0.88
-Classical RF	0.82	0.88	0.85	0.86
+Model	        Precision	Recall	  F1-Score	Accuracy
+Initial Q-VAE   0.68	         0.98	     0.80	   0.67
+Improved Q-VAE	0.85	         0.90	     0.87	   0.88
+Classical RF	0.82	         0.88	     0.85	   0.86
 
 
 ⸻
